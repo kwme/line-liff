@@ -86,8 +86,24 @@ function logout() {
 function shareTargetPicker() {
     liff
         .shareTargetPicker([{
-            type: "text",
-            text: "Hello from LIFF2.0!"
+            "type": "flex",
+            "altText": "this is a flex message",
+            "contents": {
+                "type": "bubble",
+                "body": {
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [{
+                            "type": "text",
+                            "text": "hello"
+                        },
+                        {
+                            "type": "text",
+                            "text": "world"
+                        }
+                    ]
+                }
+            }
         }])
         .then(() => {
             alert("Shared to the friend(s) you picked");
